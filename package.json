@@ -1,0 +1,24 @@
+{
+  "name": "mailwurst",
+  "version": "0.0.1",
+  "description": "Mailwurst is a forwarding SMTP server for development",
+  "main": "mailwurst.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andreas Streichardt <andreas.streichardt@gmail.com>",
+  "license": "BSD-2-Clause",
+  "bin": {
+    "mailwurst": "bin/mailwurst"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m0ppers/mailwurst"
+  },
+  "dependencies": {
+    "linger": "0.0.3",
+    "simplesmtp": "~0.3.24",
+    "nomnom": "~1.6.2",
+    "cli-prompt": "~0.3.2"
+  }
+}

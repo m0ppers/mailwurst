@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+var prompt = require('cli-prompt');
+var opts = require('../lib/opts.js');
+var mailwurst = require('../lib/mailwurst.js');
+if (opts.password === true) {
+    prompt.password('Password: ', function (val) {
+        opts.password = val;
+        mailwurst(opts);
+    });        
+} else {
+    mailwurst(opts);
+}
