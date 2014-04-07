@@ -1,6 +1,6 @@
 {
   "name": "mailwurst",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "description": "Mailwurst is a forwarding SMTP server for development",
   "main": "mailwurst.js",
   "scripts": {
