@@ -15,7 +15,11 @@ npm install -g mailwurst
 
 ## Usage
 
-mailwurst --relayserver=smtp.mynormalsmtp.com --rewriteto=mynormalemail@mynormalsmtp.de --user=mysmtpuser --password --port=9025
+sudo mailwurst --relayserver=smtp.mynormalsmtp.com --rewriteto=mynormalemail@mynormalsmtp.de --user=mysmtpuser --password --port=9025
 
 This will spawn a local mailserver on port 9025 which will accept all incoming mail. It will then open a connection to the specified relayserver,
 authenticate with the specified user and password (which will be asked for interactively) and send the mail to the email address specified. 
+
+mailwurst must be run as root.
+
+Note that mailwurst will rewrite the mail envelope. In other words: in the current version all cc and bcc recipients will be removed. 
