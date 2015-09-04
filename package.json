@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "linger": "0.0.3",
-    "simplesmtp": "~0.3.24",
+    "simplesmtp": "~0.3.35",
     "nomnom": "~1.6.2",
     "cli-prompt": "~0.3.2"
   }
