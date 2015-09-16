@@ -17,9 +17,16 @@ npm install -g mailwurst
 
 mailwurst --relayserver=smtp.mynormalsmtp.com --rewriteto=mynormalemail@mynormalsmtp.de --user=mysmtpuser --password --port=9025
 
-This will spawn a local mailserver on port 9025 which will accept all incoming mail. It will then open a connection to the specified relayserver,
-authenticate with the specified user and password (which will be asked for interactively) and send the mail to the email address specified. 
+This will spawn a local mailserver on port 9025 which will accept all incoming mail. Every received mail will then be rewritten (--rewriteto, --rewritefrom) and then sent via the specified mailserver.
 
 mailwurst must be run as root if you use a port < 1024.
 
 Note that mailwurst will rewrite the mail envelope. In other words: in the current version all cc and bcc recipients will be removed. 
+
+### Real world example:
+
+Given you are on your dev machine developing a standard "Send a mail to verify account" application which expects a locally running mail server on port 25 and have a google mail account:
+
+    hans-guenther:~ mop$ sudo mailwurst --relayserver smtp.gmail.com --rewriteto #ACCOUNT#@gmail.com --user #ACCOUNT#@gmail.com --password
+
+Register a new account with email "bla@bla.com". Check your gmail inbox :)
